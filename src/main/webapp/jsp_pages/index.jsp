@@ -8,13 +8,14 @@
 <title>EMS</title>
 </head>
 <body>
-<h1>TESTING ONE </h1>
+<h1 align="center">EMPLOYEE MANAGEMENT SYSTEM </h1>
 <div align="center"> 
      <form action="search" method="get">
            <input type="text" name="keyword"/>
            <input type="submit" value="Search">
-     </form>
-     <table>
+     </form><br/>
+     <a href="newEmployeeForm"> Add Employee</a><br/><br/>
+     <table border="1">
            <tr>
                <th>FIRST NAME </th>
                <th>LAST NAME</th>
