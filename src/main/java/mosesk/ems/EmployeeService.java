@@ -34,4 +34,8 @@ public class EmployeeService {
 		return employeeRepo.findALLByEmployeeGender(gender);
 	}
 	
+	public List<Employee> searchEmployee(String keyword) {
+		return employeeRepo.performSearch(keyword);
+	}
+	
 }
