@@ -21,7 +21,7 @@
                <th>LAST NAME</th>
                <th>GENDER</th>
                <th>SALARY </th> 
-               <th>ACTION </th> 
+               <th colspan="2">ACTION </th> 
                </tr>
                <c:forEach items="${message}" var="employee">
                <tr>
@@ -29,11 +29,11 @@
                    <td>${employee.employeeLastName}</td>
                    <td>${employee.employeeGender}</td>
                     <td>${employee.employeeSalary}</td>
+                    <td><a href="editEmployeeForm?employeeId=${employee.employeeId}">Edit</a></td>
+                    <td><a href="deleteEmployee?employeeId=${employee.employeeId}">Delete</a></td>
                </tr>
                </c:forEach>
-     
      </table>
  </div>
-
 </body>
 </html>
