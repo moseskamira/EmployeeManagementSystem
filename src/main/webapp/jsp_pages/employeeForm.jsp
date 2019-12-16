@@ -6,21 +6,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="css/custom.css"
+        rel="stylesheet">
 </head>
 <body>
-<h1 align="center"> Enter Employee Details</h1>
-<div align="center"> 
+<h3 align="center"> Enter Employee Details</h3>
+
+<div align="center">
 <form:form action="addNewEmployee" method="post" modelAttribute="employee">
-<label>ID:</label><form:input path="employeeId"/>
-<label>FirstName:</label><form:input path="employeeFirstName"/>
-<label>LastName:</label><form:input path="employeeLastName"/>
-<label>Other Name:</label><form:input path="employeeOtherName"/>
-<label>Gender:</label><form:input path="employeeGender"/>
-<label>D.O.B:</label><form:input path="employeeDOB"/>
-<label>Salary:</label><form:input path="employeeSalary"/>
-  <input type="submit" value="Save">
-</form:form>
-  
-</div>
+     <table>
+            <tr>
+                <td><label>Emp.ID No:</label></td>
+                <td><form:input path="employeeId"/></td>
+            </tr>
+            <tr>
+                <td><label>First Name:</label></td>
+                <td><form:input path="employeeFirstName"/></td>
+            </tr>
+            <tr>
+                <td><label>Last Name:</label> </td>
+                 <td><form:input path="employeeLastName"/> </td>
+            </tr>
+            <tr>
+                <td><label>Other Names:</label></td>
+                <td><form:input path="employeeOtherName"/></td> 
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td><form:input path="employeeGender"/> </td>
+            </tr>
+            <tr>
+                <td> <label>D.O.B:</label></td>
+                <td><form:input path="employeeDOB"/></td>
+            </tr>
+            <tr>
+                <td><label>Salary:</label></td>
+                <td><form:input path="employeeSalary"/> </td>
+            </tr>
+            <tr><td> </td>
+                <td align="center"> <input type="submit" value="Click To Save Employee"></td>
+            </tr>
+     </table>
+     </form:form>
+ </div>
 </body>
 </html>
