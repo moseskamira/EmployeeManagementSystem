@@ -32,6 +32,11 @@ public class EmployeeController {
 		return "employeeForm";
 	}
 	
+	@RequestMapping("")
+	public  String returnFirstPage() {
+		return "employeeForm";
+	}
+	
 	@RequestMapping(value="/addNewEmployee", method=RequestMethod.POST)
 	public String postEmployeeData(@ModelAttribute("employee") Employee employee) {
 		service.saveEmployee(employee);
