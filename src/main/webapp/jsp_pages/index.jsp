@@ -6,16 +6,19 @@
 <head>
 <meta charset="UTF-8">
 <title>EMS</title>
+<link href="css/custom.css"
+        rel="stylesheet">
 </head>
 <body>
 <h1 align="center">EMPLOYEE MANAGEMENT SYSTEM </h1>
+<h3 align="center">E.M.S</h3>
 <div align="center"> 
      <form action="search" method="get">
            <input type="text" name="keyword"/>
-           <input type="submit" value="Search">
+           <input type="submit" value="Search Employee">
      </form><br/>
      <a href="newEmployeeForm"> Add Employee</a><br/><br/>
-     <table border="1">
+     <table border="1" id="employees">
            <tr>
                <th>FIRST NAME </th>
                <th>LAST NAME</th>
