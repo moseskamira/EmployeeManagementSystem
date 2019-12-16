@@ -54,6 +54,12 @@
            <artifactId>tomcat-jasper</artifactId>
            <version>9.0.29 </version>
         </dependency>
+        <dependency>
+           <groupId>org.postgresql</groupId>
+           <artifactId>postgresql</artifactId>
+           <scope>runtime</scope>
+        </dependency>
+        
 	</dependencies>
 
 	<build>
