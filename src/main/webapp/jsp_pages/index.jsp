@@ -6,8 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>EMS</title>
-<link href="css/custom.css"
-        rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
 <h1 align="center">EMPLOYEE MANAGEMENT SYSTEM </h1>
@@ -23,8 +22,7 @@
                <th>FIRST NAME </th>
                <th>LAST NAME</th>
                <th>GENDER</th>
-               <th>SALARY </th> 
-               <th colspan="2">ACTION </th> 
+               <th>SALARY </th>
                </tr>
                <c:forEach items="${message}" var="employee">
                <tr>
@@ -32,8 +30,6 @@
                    <td>${employee.employeeLastName}</td>
                    <td>${employee.employeeGender}</td>
                     <td>${employee.employeeSalary}</td>
-                    <td><a href="editEmployeeForm?employeeId=${employee.employeeId}">Edit</a></td>
-                    <td><a href="deleteEmployee?employeeId=${employee.employeeId}">Delete</a></td>
                </tr>
                </c:forEach>
      </table>

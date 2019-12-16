@@ -5,20 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="css/custom.css"
-        rel="stylesheet">
+<title>E.M.S</title>
+<link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
 <h3 align="center"> Enter Employee Details</h3>
 
 <div align="center">
 <form:form action="addNewEmployee" method="post" modelAttribute="employee">
-     <table>
-            <tr>
-                <td><label>Emp.ID No:</label></td>
-                <td><form:input path="employeeId"/></td>
-            </tr>
+     <table id="employee">
             <tr>
                 <td><label>First Name:</label></td>
                 <td><form:input path="employeeFirstName"/></td>

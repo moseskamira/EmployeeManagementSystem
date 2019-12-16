@@ -17,23 +17,22 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService service;
 	
-	@RequestMapping("/employees")
-	public ModelAndView home() {
+//	@RequestMapping("")
+//	public  String returnHomePage() {
+//		return "index";
+//	}
+	
+	@RequestMapping("")
+	public ModelAndView employees() {
 		List<Employee> employeeList = service.getAllEmployees();
 		ModelAndView mv = new ModelAndView("index");
-		if(employeeList.isEmpty()==false) {
-			mv.addObject("message", employeeList);
-		}
+		mv.addObject("message", employeeList);
+		
 		return mv;
 	}
 	@RequestMapping("/newEmployeeForm")
 	public  String returnEmployeeRegForm(Map<String, Object> model) {
 		model.put("employee", new Employee());
-		return "employeeForm";
-	}
-	
-	@RequestMapping("")
-	public  String returnFirstPage() {
 		return "employeeForm";
 	}
 	
@@ -57,7 +56,7 @@ public class EmployeeController {
 	@RequestMapping(value="/deleteEmployee")
 	public String deleteEmployee(@RequestParam Long employeeId) {
 		service.deleteEmployee(employeeId);		
-		return "index";
+		return "searchResult";
 	}
 	
 	@RequestMapping("/search")

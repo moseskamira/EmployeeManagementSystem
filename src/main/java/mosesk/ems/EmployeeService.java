@@ -30,10 +30,6 @@ public class EmployeeService {
 		return "Employee Deleted Successfully";
 	}
 	
-	public List<Employee> fetchAllByGender(String gender) {
-		return employeeRepo.findALLByEmployeeGender(gender);
-	}
-	
 	public List<Employee> searchEmployee(String keyword) {
 		return employeeRepo.performSearch(keyword);
 	}
