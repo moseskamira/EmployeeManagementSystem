@@ -1,5 +1,5 @@
 
-CREATE TABLE employee
+CREATE TABLE Employee
 (
  employeeId varchar(11) NOT NULL ,
  employeeFirstName varchar(100) NOT NULL,
