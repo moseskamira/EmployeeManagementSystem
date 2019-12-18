@@ -20,6 +20,9 @@ public class EmployeeService {
 		return employeeRepo.findById(employeeId);
 	}
 	
+	public Employee getSingleEmployee(Long employeeId) {
+		return employeeRepo.getOne(employeeId);	}
+	
 	public void saveEmployee(Employee employee) {
 		employeeRepo.saveAndFlush(employee);
 	}

@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 	@Query(value="FROM Employee WHERE employeeFirstName LIKE '%' || :keyword || '%'" 
 			+ " OR employeeLastName LIKE '%' || :keyword || '%'" 
-					+ "OR employeeSalary LIKE '%' || :keyword || '%'"
 					+ "OR employeeGender LIKE '%' || :keyword || '%'")
 	public List<Employee> performSearch(@Param("keyword") String keyword);
 	
