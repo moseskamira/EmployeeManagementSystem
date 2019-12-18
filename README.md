@@ -1,4 +1,4 @@
-# EmployeeManagementSystem
+# Employee Management System
 The Employee Management System is a web-based system for managing employee Data in an Organization.
 
 ## Used Technology
