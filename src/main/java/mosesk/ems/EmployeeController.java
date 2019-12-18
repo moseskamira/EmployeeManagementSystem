@@ -27,7 +27,6 @@ public class EmployeeController {
 		List<Employee> employeeList = service.getAllEmployees();
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("message", employeeList);
-		
 		return mv;
 	}
 	@RequestMapping("/newEmployeeForm")
