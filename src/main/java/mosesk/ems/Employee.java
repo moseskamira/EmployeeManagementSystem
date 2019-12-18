@@ -1,35 +1,46 @@
 package mosesk.ems;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="empTable")
 public class Employee {
 	
 	@Id
-	Long employeeId;
-	@NotNull
-	String employeeFirstName;
-	@NotNull
-	String employeeLastName;
-	String employeeOtherName;
-	@NotNull
-	String employeeGender;
-	@NotNull
-	String employeeDOB;
-	@NotNull
-	Double employeeSalary;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="empID", unique=true)
+	int employeeId;
 	
+	@Column(name="empFirstName", nullable=false)
+	String employeeFirstName;
+	
+	@Column(name="empLastName", nullable=false)
+	String employeeLastName;
+	
+	@Column(name="empOtherName")
+	String employeeOtherName;
+	
+	@Column(name="empGender", nullable=false)
+	String employeeGender;
+	
+	@Column(name="empDOB", nullable=false)
+	String employeeDOB;
+	
+	@Column(name="empSalary", nullable=false)
+	Double employeeSalary;
 	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Employee(Long employeeId, @NotNull String employeeFirstName, @NotNull String employeeLastName,
-			String employeeOtherName, @NotNull String employeeGender, @NotNull String employeeDOB,
-			@NotNull Double employeeSalary) {
+	public Employee(int employeeId, String employeeFirstName, String employeeLastName, String employeeOtherName,
+			String employeeGender, String employeeDOB, Double employeeSalary) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeFirstName = employeeFirstName;
@@ -40,12 +51,10 @@ public class Employee {
 		this.employeeSalary = employeeSalary;
 	}
 
-
-
-	public Long getEmployeeId() {
+	public int getEmployeeId() {
 		return employeeId;
 	}
-	public void setEmployeeId(Long employeeId) {
+	public void setEmployeeId(int employeeId) {
 		this.employeeId = employeeId;
 	}
 	public String getEmployeeFirstName() {
