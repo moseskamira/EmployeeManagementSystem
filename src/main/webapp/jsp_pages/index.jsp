@@ -13,10 +13,14 @@
 <h3 align="center">E.M.S</h3>
 <div align="center"> 
      <form action="search" method="get">
-           <input type="text" name="keyword"/>
-           <input type="submit" value="Search Employee">
-     </form><br/>
-     <a href="newEmployeeForm"> Add Employee</a><br/><br/>
+     <table>
+     <tr><td><input type="text" name="keyword"/><input type="submit" value="Search"></td>
+         <td> </td><td></td>
+         <td align="right"><a href="newEmployeeForm"> <em>ADD EMPLOYEE</em></a></td></tr>
+         <tr><td></td><td> </td><td></td><td> </td></tr>
+     </table>
+     </form>
+   
      <table border="1" id="employees">
            <tr>
                <th>FIRST NAME </th>

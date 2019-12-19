@@ -17,11 +17,6 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService service;
 	
-//	@RequestMapping("")
-//	public  String returnHomePage() {
-//		return "index";
-//	}
-	
 	@RequestMapping("")
 	public ModelAndView employees() {
 		List<Employee> employeeList = service.getAllEmployees();
@@ -38,6 +33,7 @@ public class EmployeeController {
 	@RequestMapping(value="/addNewEmployee", method=RequestMethod.POST)
 	public String postEmployeeData(@ModelAttribute("employee") Employee employee) {
 		service.saveEmployee(employee);
+		
 		return "employeeForm";
 	}
 	@RequestMapping("/editEmployeeForm")
