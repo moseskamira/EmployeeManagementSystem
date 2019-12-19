@@ -6,23 +6,24 @@
 <head>
 <meta charset="UTF-8">
 <title>EMS</title>
+<link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
-<h1>Edit From Here</h1>
-<div align="center"> 
-<form:form action="editEmployeeInfo" method="put" modelAttribute="employee">
-<label>ID:</label> ${employeeToEdit.employeeId}
-<form:hidden path="employeeId"/>
-<label>FirstName:</label><form:input path="employeeFirstName"/>
-<label>LastName:</label><form:input path="employeeLastName"/>
-<label>Other Name:</label><form:input path="employeeOtherName"/>
-<label>Gender:</label><form:input path="employeeGender"/>
-<label>D.O.B:</label><form:input path="employeeDOB"/>
-<label>Salary:</label><form:input path="employeeSalary"/>
-  <input type="submit" value="Save">
-</form:form>
-  
-</div>
+<div align="center">
+<h1>EDIT ${employee.employeeFirstName}'s DATA </h1>
+    <form:form action="addNewEmployee" method="post" modelAttribute="employee">
+        <table border="1" id="employees">
+           <tr><td><label>ID:</label></td><td> ${employee.employeeId} <form:hidden path="employeeId"/></td></tr>
+           <tr><td><label>FirstName:</label></td><td><form:input path="employeeFirstName"/> </td></tr>
+           <tr><td><label>LastName:</label></td><td><form:input path="employeeLastName"/> </td></tr>
+           <tr><td> <label>Other Name:</label></td><td><form:input path="employeeOtherName"/></td></tr>
+           <tr><td> <label>Gender:</label></td><td><form:input path="employeeGender"/></td></tr>
+           <tr><td> <label>D.O.B:</label></td><td><form:input path="employeeDOB"/></td></tr>
+           <tr><td> <label>Salary:</label></td><td><form:input path="employeeSalary"/></td></tr><tr>
+           </td><td><td>  <input type="submit" value="Save"></td></tr>        
+        </table>
+     </form:form>
+ </div>
 
 </body>
 </html>

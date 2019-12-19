@@ -14,7 +14,7 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="empID", unique=true)
-	int employeeId;
+	Long employeeId;
 	
 	@Column(name="empFirstName", nullable=false)
 	String employeeFirstName;
@@ -39,7 +39,7 @@ public class Employee {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Employee(int employeeId, String employeeFirstName, String employeeLastName, String employeeOtherName,
+	public Employee(Long employeeId, String employeeFirstName, String employeeLastName, String employeeOtherName,
 			String employeeGender, String employeeDOB, Double employeeSalary) {
 		super();
 		this.employeeId = employeeId;
@@ -51,10 +51,10 @@ public class Employee {
 		this.employeeSalary = employeeSalary;
 	}
 
-	public int getEmployeeId() {
+	public Long getEmployeeId() {
 		return employeeId;
 	}
-	public void setEmployeeId(int employeeId) {
+	public void setEmployeeId(Long employeeId) {
 		this.employeeId = employeeId;
 	}
 	public String getEmployeeFirstName() {

@@ -43,10 +43,10 @@ public class EmployeeController {
 	@RequestMapping("/editEmployeeForm")
 	public ModelAndView editEmployForm(@RequestParam Long employeeId) {
 		ModelAndView mv = new ModelAndView("employeeEditForm");
-		Optional<Employee> employeeToBeEdited = service.getEmployeeById(employeeId);
-		mv.addObject("employeeToEdit", employeeToBeEdited);
+		mv.addObject("employee", service.getSingleEmployee(employeeId));
 		return mv;
 	}
+	
 	@RequestMapping(value="editEmployeeInfo", method=RequestMethod.PUT)
 	public void updateEmployeeData() {
 		
