@@ -12,7 +12,7 @@
 
 <div align="center">
 <h1> SEARCH RESULT </h1>
-<table border="1" id="employees">
+<table border="1" id="searchedmployees">
            <tr>
                <th>FIRST NAME </th>
                <th>LAST NAME</th>
