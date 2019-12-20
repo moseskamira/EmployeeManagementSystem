@@ -19,7 +19,7 @@ public class EmployeeController {
 	
 	@RequestMapping("")
 	public ModelAndView employees() {
-		List<Employee> employeeList = service.getAllEmployees();
+		List<Employee> employeeList = service.fetchAllEmployees();
 		ModelAndView mv = new ModelAndView("index");
 		mv.addObject("message", employeeList);
 		return mv;

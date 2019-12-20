@@ -14,6 +14,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 					+ "OR employeeGender LIKE '%' || :keyword || '%'")
 	public List<Employee> performSearch(@Param("keyword") String keyword);
 	
+	public List<Employee> findAllByOrderByEmployeeIdDesc();
+	
 //	List<Employee> findALLByEmployeeGender(String employeeGender);
 	
 //	@Query(value="FROM Employee employee where employeeGender=?1 order by employeeFirstName")
