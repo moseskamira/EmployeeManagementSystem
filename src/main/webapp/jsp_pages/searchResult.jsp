@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <link href="css/custom.css" rel="stylesheet">
 </head>
-<body background='imageFolder/ems2.jpg'/>>
+<body background='imageFolder/emsb.jpeg'>
 
 <div align="center">
 <h1> SEARCH RESULT </h1>

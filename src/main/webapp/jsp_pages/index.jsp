@@ -8,7 +8,7 @@
 <title>EMS</title>
 <link href="css/custom.css" rel="stylesheet">
 </head>
-<body background='imageFolder/ems2.jpg'/>>
+<body background='imageFolder/emsb.jpeg'>
 <h1 align="center">EMPLOYEE MANAGEMENT SYSTEM </h1>
 <h3 align="center">E.M.S</h3>
 <div align="center"> 
@@ -16,7 +16,7 @@
      <table>
      <tr><td><input type="text" name="keyword"/ placeholder="CASE SENSITIVE SEARCH"><input type="submit" value="Search"></td>
          <td> </td><td></td>
-         <td align="right"><a href="newEmployeeForm"> <em>ADD EMPLOYEE</em></a></td></tr>
+        <td align="right"><a href="newEmployeeForm"> <em><font color="black">ADD EMPLOYEE</font></em></a></td></tr>
          <tr><td></td><td> </td><td></td><td> </td></tr>
      </table>
      </form>
@@ -38,5 +38,11 @@
                </c:forEach>
      </table>
  </div>
+
 </body>
+<footer align="center">  
+     <p>Designed and Implemented By: Moses Kamira Talemwa</p>  
+     <p>For E-mail To: <a href="mailto:moses.african@gmail.com">moses.african@gmail.com</a>.</p>  
+     <p>&copy; moseskamira</p> 
+</footer> 
 </html>
