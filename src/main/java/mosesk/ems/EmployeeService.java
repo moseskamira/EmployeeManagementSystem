@@ -16,6 +16,10 @@ public class EmployeeService {
 		return employeeRepo.findAll();
 	}
 	
+	public List<Employee> fetchAllEmployees() {
+		return employeeRepo.findAllByOrderByEmployeeIdDesc();
+	}
+	
 	public Optional<Employee> getEmployeeById(Long employeeId) {
 		return employeeRepo.findById(employeeId);
 	}
