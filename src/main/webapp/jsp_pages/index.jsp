@@ -8,13 +8,13 @@
 <title>EMS</title>
 <link href="css/custom.css" rel="stylesheet">
 </head>
-<body>
+<body background='imageFolder/ems2.jpg'/>>
 <h1 align="center">EMPLOYEE MANAGEMENT SYSTEM </h1>
 <h3 align="center">E.M.S</h3>
 <div align="center"> 
      <form action="search" method="get">
      <table>
-     <tr><td><input type="text" name="keyword"/><input type="submit" value="Search"></td>
+     <tr><td><input type="text" name="keyword"/ placeholder="CASE SENSITIVE SEARCH"><input type="submit" value="Search"></td>
          <td> </td><td></td>
          <td align="right"><a href="newEmployeeForm"> <em>ADD EMPLOYEE</em></a></td></tr>
          <tr><td></td><td> </td><td></td><td> </td></tr>

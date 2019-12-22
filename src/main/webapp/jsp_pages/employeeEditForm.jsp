@@ -8,11 +8,11 @@
 <title>EMS</title>
 <link href="css/custom.css" rel="stylesheet">
 </head>
-<body>
+<body background='imageFolder/ems2.jpg'/>>
 <div align="center">
 <h1>EDIT ${employee.employeeFirstName}'s DATA </h1>
     <form:form action="addNewEmployee" method="post" modelAttribute="employee">
-        <table border="1" id="employees">
+        <table border="1" id="searchedemployees">
            <tr><td><label>ID:</label></td><td> ${employee.employeeId} <form:hidden path="employeeId"/></td></tr>
            <tr><td><label>FirstName:</label></td><td><form:input path="employeeFirstName"/> </td></tr>
            <tr><td><label>LastName:</label></td><td><form:input path="employeeLastName"/> </td></tr>

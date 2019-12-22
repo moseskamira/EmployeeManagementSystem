@@ -1,13 +1,10 @@
 @charset "UTF-8";
 
-body {
-    background-color: lightblue;
-}
 
 #employees {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color: #D98880 ;
-  border-radius: 1em;
+  border-radius: 2em;
   border-collapse: collapse;
   width: 60%;
 }
@@ -33,27 +30,29 @@ body {
   color: white;
 }
 
-#searchedmployees {
+#searchedemployees {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color: #D98880 ;
   border-collapse: collapse;
-  width: 100%;
+  width: 40%;
+  border-radius: 2em;
+  
 }
 
-#searchedmployees td, #searchedmployees th {
+#searchedemployees td, #searchedmployees th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#searchedmployees tr:nth-child(even){
+#searchedemployees tr:nth-child(even){
 	background-color: #f2f2f2;
 	}
 
-#searchedmployees tr:hover {
+#searchedemployees tr:hover {
 	background-color: #ddd;
 	}
 
-#searchedmployees th {
+#searchedemployees th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
@@ -64,7 +63,7 @@ body {
 
 #addEmployee {
 	background-color: #D98880 ;
-	width: 60%;
+	width: 40%;
 	border-radius: 2em;
 }
 

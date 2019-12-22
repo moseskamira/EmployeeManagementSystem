@@ -8,28 +8,20 @@
 <title>Insert title here</title>
 <link href="css/custom.css" rel="stylesheet">
 </head>
-<body>
+<body background='imageFolder/ems2.jpg'/>>
 
 <div align="center">
 <h1> SEARCH RESULT </h1>
-<table border="1" id="searchedmployees">
-           <tr>
-               <th>FIRST NAME </th>
-               <th>LAST NAME</th>
-               <th>GENDER</th>
-               <th>SALARY </th> 
-               <th colspan="2">ACTION </th> 
-               </tr>
+<table border="1" id="searchedemployees">
                <c:forEach items="${searchResult}" var="employee">
-               <tr>
-                   <td>${employee.employeeFirstName}</td>
-                   <td>${employee.employeeLastName}</td>
-                   <td>${employee.employeeGender}</td>
-                    <td>${employee.employeeSalary}</td>
-                    <td><a href="editEmployeeForm?employeeId=${employee.employeeId}">Edit</a></td>
-                    <td><a href="deleteEmployee?employeeId=${employee.employeeId}">Delete</a></td>
+               <tr><td>FIRST NAME: </td> <td>${employee.employeeFirstName}</td></tr>
+               <tr><td>LAST NAME: </td><td>${employee.employeeLastName}</td></tr>
+               <tr><td>GENDER </td><td>${employee.employeeGender}</td></tr>
+                <tr><td>SALARY</td><td>${employee.employeeSalary}</td><tr>
+                <tr><td align="center">ACTION</td><td align="center"><a href="editEmployeeForm?employeeId=${employee.employeeId}">Edit</a> &nbsp;<a href="deleteEmployee?employeeId=${employee.employeeId}">Delete</a></td>
                </tr>
                </c:forEach>
+  
      </table>
  </div>
 
