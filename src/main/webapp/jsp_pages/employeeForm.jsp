@@ -8,7 +8,7 @@
 <title>E.M.S</title>
 <link href="css/custom.css" rel="stylesheet">
 </head>
-<body background='imageFolder/ems2.jpg'/>>
+<body background='imageFolder/emsb.jpeg'>
 <h1 align="center"> ENTER EMPLOYEE DATA</h1>
 
 <div align="center">
@@ -20,7 +20,7 @@
           <tr><td><label>Gender:</label></td><td><form:input path="employeeGender" placeholder="Enter Gender"/> </td></tr>
           <tr><td> <label>D.O.B:</label></td><td><form:input path="employeeDOB" placeholder="Enter Date Of Birth"/></td></tr>
           <tr><td><label>Salary:</label></td><td><form:input path="employeeSalary" placeholder="Enter Salary"/> </td>
-          </tr><tr><td><a href="/">Back</a> </td>
+          </tr><tr><td><a href="/"><em>Back</a> </td>
           <td align="center"> <input type="submit" value="Click To Save Employee"></td></tr>
      </table>
      </form:form>
