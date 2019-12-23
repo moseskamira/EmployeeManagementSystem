@@ -43,6 +43,6 @@
 <footer align="center">  
      <p>Designed and Implemented By: Moses Kamira Talemwa</p>  
      <p>For E-mail To: <a href="mailto:moses.african@gmail.com">moses.african@gmail.com</a>.</p>  
-     <p>&copy; moseskamira</p> 
+     <p>&copy; <a href="https://github.com/moseskamira">moseskamira</a></p> 
 </footer> 
 </html>
