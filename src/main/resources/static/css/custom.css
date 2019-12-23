@@ -4,8 +4,7 @@
 #employees {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color: #D98880 ;
-  border-radius: 2em;
-  border-collapse: collapse;
+  border-radius: 1em;
   width: 60%;
 }
 
@@ -33,7 +32,6 @@
 #searchedemployees {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color: #D98880 ;
-  border-collapse: collapse;
   width: 40%;
   border-radius: 2em;
   
