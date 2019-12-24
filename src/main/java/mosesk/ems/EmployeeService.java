@@ -24,7 +24,7 @@ public class EmployeeService {
 		return employeeRepo.findById(employeeId);
 	}
 	
-	public Employee getSingleEmployee(Long employeeId) {
+	public Employee getEmployeeDetail(Long employeeId) {
 		return employeeRepo.getOne(employeeId);	}
 	
 	public void saveEmployee(Employee employee) {

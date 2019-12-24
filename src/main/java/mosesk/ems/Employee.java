@@ -30,6 +30,12 @@ public class Employee {
 	
 	@Column(name="empDOB", nullable=false)
 	String employeeDOB;
+	@Column(name="empDeptName", nullable=false)
+	String employeeDeptName;
+	@Column(name="empJobType", nullable=false)
+	String employeeJobType;
+	@Column(name="empContDur", nullable=false)
+	int employeeContractDuration;
 	
 	@Column(name="empSalary", nullable=false)
 	Double employeeSalary;
@@ -40,7 +46,8 @@ public class Employee {
 	}
 	
 	public Employee(Long employeeId, String employeeFirstName, String employeeLastName, String employeeOtherName,
-			String employeeGender, String employeeDOB, Double employeeSalary) {
+			String employeeGender, String employeeDOB, String employeeDeptName, String employeeJobType,
+			int employeeContractDuration, Double employeeSalary) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeFirstName = employeeFirstName;
@@ -48,48 +55,88 @@ public class Employee {
 		this.employeeOtherName = employeeOtherName;
 		this.employeeGender = employeeGender;
 		this.employeeDOB = employeeDOB;
+		this.employeeDeptName = employeeDeptName;
+		this.employeeJobType = employeeJobType;
+		this.employeeContractDuration = employeeContractDuration;
 		this.employeeSalary = employeeSalary;
 	}
-
+	
 	public Long getEmployeeId() {
 		return employeeId;
 	}
+
 	public void setEmployeeId(Long employeeId) {
 		this.employeeId = employeeId;
 	}
+
 	public String getEmployeeFirstName() {
 		return employeeFirstName;
 	}
+
 	public void setEmployeeFirstName(String employeeFirstName) {
 		this.employeeFirstName = employeeFirstName;
 	}
+
 	public String getEmployeeLastName() {
 		return employeeLastName;
 	}
+
 	public void setEmployeeLastName(String employeeLastName) {
 		this.employeeLastName = employeeLastName;
 	}
+
 	public String getEmployeeOtherName() {
 		return employeeOtherName;
 	}
+
 	public void setEmployeeOtherName(String employeeOtherName) {
 		this.employeeOtherName = employeeOtherName;
 	}
+
 	public String getEmployeeGender() {
 		return employeeGender;
 	}
+
 	public void setEmployeeGender(String employeeGender) {
 		this.employeeGender = employeeGender;
 	}
+
 	public String getEmployeeDOB() {
 		return employeeDOB;
 	}
+
 	public void setEmployeeDOB(String employeeDOB) {
 		this.employeeDOB = employeeDOB;
 	}
+
+	public String getEmployeeDeptName() {
+		return employeeDeptName;
+	}
+
+	public void setEmployeeDeptName(String employeeDeptName) {
+		this.employeeDeptName = employeeDeptName;
+	}
+
+	public String getEmployeeJobType() {
+		return employeeJobType;
+	}
+
+	public void setEmployeeJobType(String employeeJobType) {
+		this.employeeJobType = employeeJobType;
+	}
+
+	public int getEmployeeContractDuration() {
+		return employeeContractDuration;
+	}
+
+	public void setEmployeeContractDuration(int employeeContractDuration) {
+		this.employeeContractDuration = employeeContractDuration;
+	}
+
 	public Double getEmployeeSalary() {
 		return employeeSalary;
 	}
+
 	public void setEmployeeSalary(Double employeeSalary) {
 		this.employeeSalary = employeeSalary;
 	}
@@ -98,7 +145,8 @@ public class Employee {
 	public String toString() {
 		return "Employee [employeeId=" + employeeId + ", employeeFirstName=" + employeeFirstName + ", employeeLastName="
 				+ employeeLastName + ", employeeOtherName=" + employeeOtherName + ", employeeGender=" + employeeGender
-				+ ", employeeDOB=" + employeeDOB + ", employeeSalary=" + employeeSalary + "]";
+				+ ", employeeDOB=" + employeeDOB + ", employeeDeptName=" + employeeDeptName + ", employeeJobType="
+				+ employeeJobType + ", employeeContractDuration=" + employeeContractDuration + ", employeeSalary="
+				+ employeeSalary + "]";
 	}
-
 }
