@@ -1,35 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+   
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Employee Detail</title>
 
 <style type="text/css">
-#searchedemployees {
+#empDetail {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color: #ddd;
   width: 40%;
   border-radius: 2em;
 }
-#searchedemployees td, #searchedemployees th {
+#empDetail td, #empDetail th {
   border: 0px;
   padding: 8px;
 }
-#searchedemployees tr:nth-child(even){
+#empDetail tr:nth-child(even){
 	background-color: #ffffff;
 	}
 </style>
 
 </head>
 <body background='imageFolder/emsb.jpeg'>
-
 <div align="center">
-<h1> SEARCH RESULT </h1>
-<table border="1" id="searchedemployees">
-               <c:forEach items="${searchResult}" var="employee">
+<h1> DETAILS FOR ${employee.employeeFirstName} </h1>
+<table border="1" id="empDetail">
                <tr><td colspan="3" align="center">BIO DATA </td></tr>
                <tr><td rowspan="5">PROFILE PHOTO </td> <td>First Name:</td><td>${employee.employeeFirstName}</td></tr>
                <tr><td>Last Name:</td><td>${employee.employeeLastName}</td></tr>
@@ -42,10 +40,7 @@
                <tr><td> </td><td>Contract Duration:</td> <td>${employee.employeeContractDuration} </td></tr>
                <tr><td> </td><td>Salary:</td> <td>${employee.employeeSalary}</td><tr>
                </tr>
-               </c:forEach>
-  
      </table>
  </div>
-
 </body>
 </html>
