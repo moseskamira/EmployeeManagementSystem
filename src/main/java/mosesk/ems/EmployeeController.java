@@ -112,7 +112,6 @@ public class EmployeeController {
 			if(!searchResultList.isEmpty()) {
 				mv.setViewName("searchResult");
 				mv.addObject("searchResult", searchResultList);
-				
 			}else {
 				mv.setViewName("index");
 			}
