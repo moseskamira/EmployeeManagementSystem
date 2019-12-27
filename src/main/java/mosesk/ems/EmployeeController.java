@@ -20,6 +20,9 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService service;
 	
+	@Autowired
+	DepartmentDropDownService deptService;
+	
 	@RequestMapping("")
 	public ModelAndView employees() {
 		List<Employee> employeeList = service.fetchAllEmployees();
@@ -28,9 +31,12 @@ public class EmployeeController {
 		return mv;
 	}
 	@RequestMapping("/newEmployeeForm")
-	public  String returnEmployeeRegForm(Map<String, Object> model) {
-		model.put("employee", new Employee());
-		return "employeeForm";
+	public  ModelAndView returnEmployeeRegForm() {
+		List<DepartmentDropDown> deptList = deptService.getAllDepartments();
+		ModelAndView mv = new ModelAndView("employeeForm");
+		mv.addObject("departments", deptList);
+		mv.addObject("employee", new Employee());
+		return mv;
 	}
 	
 	@RequestMapping(value="/addNewEmployee", method=RequestMethod.POST)
@@ -120,6 +126,23 @@ public class EmployeeController {
 		}
 		return mv;
 		}
+	
+	@RequestMapping("/newDepartmentForm")
+	public  ModelAndView returnDepartmentForm() {
+		ModelAndView mv = new ModelAndView("departmentForm");
+		mv.addObject("department", new DepartmentDropDown());
+		return mv;
+	}
+	
+	@RequestMapping(value="/addDepartment", method=RequestMethod.POST)
+	public String postDepartment(@ModelAttribute("department") DepartmentDropDown department, 
+			BindingResult result, SessionStatus status) {
+		deptService.saveDepartment(department);
+		status.isComplete();
+		return "redirect:newDepartmentForm";
+		}
+	
+
 }
 	
 	

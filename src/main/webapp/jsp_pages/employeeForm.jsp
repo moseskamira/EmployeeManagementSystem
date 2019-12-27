@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,13 +45,11 @@
                  <form:radiobutton path="employeeGender" value="Female"/>Female
               </td></tr>
           <tr><td> <label>Department:</label></td>
-              <td><form:select path="employeeDeptName">
-                        <form:option value="HumanResource " label="Human Resource"/>
-                        <form:option value="Technology" label="Technology"/>
-                        <form:option value="Operations " label="Operations"/>
-                        <form:option value="Networking" label="Networking"/>
-                  </form:select>
-               </td></tr>
+              <td> <form:select path="employeeDeptName">
+              <c:forEach items="${departments}" var="department">
+              <option value="${department.deptName}">${department.deptName}</option>
+              </c:forEach>
+              </form:select></td></tr>
           <tr><td> <label>Employment Type:</label></td>
           <td><form:select path="employeeJobType"> 
                     <form:option value="FullTime" label="Full Time"/>
@@ -71,6 +70,7 @@
                   <form:option value="15000" label="15000 Dollars"/>
                   <form:option value="27000" label="27000 Dollars"/>
                  </form:select></td></tr>
+           <tr><td> <label>Profile Photo:</label></td><td><form:input type="file" path="employeePhoto"/></td></tr>
           <tr><td> </td><td align="left"> <input type="submit" value="Save Employee"></td></tr>
      </table>
     </form:form>
