@@ -5,7 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Add New Employee</title>
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+ <script>  
+         $(function() {  
+            $( "#datepicker-1" ).datepicker();  
+         });  
+ </script>  
 <style type="text/css">
 .addEmpTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -31,14 +38,11 @@
           <tr><td><label>First Name:</label></td><td><form:input path="employeeFirstName" placeholder="Enter First Name"/></td></tr>
           <tr><td><label>Last Name:</label> </td><td><form:input path="employeeLastName" placeholder="Enter Last Name"/> </td></tr>
           <tr><td><label>Other Names:</label></td><td><form:input path="employeeOtherName" placeholder="Enter Other Name"/></td></tr>
-          <tr><td> <label>Date Of Birth:</label></td><td><form:input path="employeeDOB" placeholder="Enter Date Of Birth"/></td></tr>
+          <tr><td> <label>Date Of Birth:</label></td><td><form:input path="employeeDOB" placeholder="Select Date Of Birth" id="datepicker-1"/></td></tr>
           <tr><td><label>Gender:</label></td>
-              <td><form:select path="employeeGender"> 
-                  <form:option value="Male" label="Male"/>
-                  <form:option value="Female" label="Female"/>
-                 </form:select>
+              <td><form:radiobutton path="employeeGender" value="Male" checked="true"/>Male
+                 <form:radiobutton path="employeeGender" value="Female"/>Female
               </td></tr>
-          
           <tr><td> <label>Department:</label></td>
               <td><form:select path="employeeDeptName">
                         <form:option value="HumanResource " label="Human Resource"/>

@@ -7,6 +7,7 @@ EMS is a Web-Based Application for managing Employee Data.
 - Hibernate
 - Postgres Database
 - CSS (Cascading Style Sheet)
+- HTML5
 - MVC (Model View Controller)
 
 ## Project Development Objectives
