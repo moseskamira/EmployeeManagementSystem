@@ -29,7 +29,7 @@
 <h1> DETAILS FOR ${employee.employeeFirstName} </h1>
 <table border="1" id="empDetail">
                <tr><td colspan="3" align="center">BIO DATA </td></tr>
-               <tr><td rowspan="5">PROFILE PHOTO </td> <td>First Name:</td><td>${employee.employeeFirstName}</td></tr>
+               <tr><td rowspan="5">${employee.employeePhoto} </td> <td>First Name:</td><td>${employee.employeeFirstName}</td></tr>
                <tr><td>Last Name:</td><td>${employee.employeeLastName}</td></tr>
                <tr><td>Other Names:</td><td>${employee.employeeOtherName}</td></tr>
                <tr><td>Date Of Birth:</td><td>${employee.employeeDOB}</td></tr>

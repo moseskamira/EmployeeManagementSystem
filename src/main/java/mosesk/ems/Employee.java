@@ -1,5 +1,7 @@
 package mosesk.ems;
 
+import java.io.File;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,6 +42,9 @@ public class Employee {
 	@Column(name="empSalary", nullable=false)
 	Double employeeSalary;
 	
+	@Column(name="empPhoto")
+	File employeePhoto;
+	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -47,7 +52,7 @@ public class Employee {
 	
 	public Employee(Long employeeId, String employeeFirstName, String employeeLastName, String employeeOtherName,
 			String employeeGender, String employeeDOB, String employeeDeptName, String employeeJobType,
-			int employeeContractDuration, Double employeeSalary) {
+			int employeeContractDuration, Double employeeSalary, File employeePhoto) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeFirstName = employeeFirstName;
@@ -59,6 +64,7 @@ public class Employee {
 		this.employeeJobType = employeeJobType;
 		this.employeeContractDuration = employeeContractDuration;
 		this.employeeSalary = employeeSalary;
+		this.employeePhoto = employeePhoto;
 	}
 	
 	public Long getEmployeeId() {
@@ -140,6 +146,14 @@ public class Employee {
 	public void setEmployeeSalary(Double employeeSalary) {
 		this.employeeSalary = employeeSalary;
 	}
+	
+	public File getEmployeePhoto() {
+		return employeePhoto;
+	}
+
+	public void setEmployeePhoto(File employeePhoto) {
+		this.employeePhoto = employeePhoto;
+	}
 
 	@Override
 	public String toString() {
@@ -147,6 +161,8 @@ public class Employee {
 				+ employeeLastName + ", employeeOtherName=" + employeeOtherName + ", employeeGender=" + employeeGender
 				+ ", employeeDOB=" + employeeDOB + ", employeeDeptName=" + employeeDeptName + ", employeeJobType="
 				+ employeeJobType + ", employeeContractDuration=" + employeeContractDuration + ", employeeSalary="
-				+ employeeSalary + "]";
+				+ employeeSalary + ", employeePhoto=" + employeePhoto + "]";
 	}
+
+	
 }

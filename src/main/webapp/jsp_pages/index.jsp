@@ -14,8 +14,9 @@
 <div align="center"> 
      <form action="search" method="get">
      <table>
-           <tr><td><input type="text" name="myKeyword"/ placeholder="CASE SENSITIVE SEARCH"><input type="submit" value="Search"></td>
-           <td> </td><td></td>
+           <tr> <td align="right"><a href="newDepartmentForm"> <em><font color="black">ADD DEPARTMENT</font></em></a></td>
+           <td><input type="text" name="myKeyword"/ placeholder="CASE SENSITIVE SEARCH"><input type="submit" value="Search"></td>
+           <td> </td>
            <td align="right"><a href="newEmployeeForm"> <em><font color="black">ADD EMPLOYEE</font></em></a></td></tr>
            <tr><td></td><td> </td><td></td><td> </td></tr>
      </table>
@@ -40,6 +41,7 @@
                </tr>
                </c:forEach>
      </table>
+     
  </div>
 
 </body>
