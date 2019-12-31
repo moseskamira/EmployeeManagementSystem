@@ -1,9 +1,6 @@
 package mosesk.ems;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,6 +27,7 @@ public class EmployeeController {
 		mv.addObject("employees", employeeList);
 		return mv;
 	}
+	
 	@RequestMapping("/newEmployeeForm")
 	public  ModelAndView returnEmployeeRegForm() {
 		List<DepartmentDropDown> deptList = deptService.getAllDepartments();
@@ -76,7 +74,7 @@ public class EmployeeController {
 		}
 		service.saveEmployee(employee);
 		status.setComplete();
-		return "redirect:";
+		return "redirect:newEmployeeForm";
 	}
 	
 	@RequestMapping(value = "/success", method = RequestMethod.GET)
@@ -95,11 +93,6 @@ public class EmployeeController {
 		ModelAndView mv = new ModelAndView("employeeDetailView");
 		mv.addObject("employee", service.getEmployeeDetail(employeeId));
 		return mv;
-	}
-	
-	@RequestMapping(value="editEmployeeInfo", method=RequestMethod.PUT)
-	public void updateEmployeeData() {
-		
 	}
 	
 	@RequestMapping(value="/deleteEmployee")
@@ -141,8 +134,6 @@ public class EmployeeController {
 		status.isComplete();
 		return "redirect:newDepartmentForm";
 		}
-	
-
 }
 	
 	
