@@ -1,5 +1,7 @@
 # Employee Management System (EMS)
-EMS is a Web-Based Application for managing Employee Data.
+EMS is a Web-Based Application for managing Employee Data.<br/>
+Using the E.M.S, a company administrator can create new departments in the company, capture new employee data, retrieve all employees, search employee(s) basing on search criteria such as gender, firstName, department, edit employee data, view detailed information of an employee as well as deleting an employee.
+
 ## Used Technology/ Approach/Language
 - Spring Boot.
 - Java
@@ -25,11 +27,13 @@ EMS is a Web-Based Application for managing Employee Data.
 - Search Employee(s).
 - Update Employee Data.
 - Delete Employee.
+- Create Department.
 
 ## How To Test EMS
 ### Online
 - Access the app via the link:https://ems-uganda.herokuapp.com/
 - Perform the necessary tests as appropriate.
+
 ### Locally
 - clone the repository onto your machine via the link: https://github.com/moseskamira/EmployeeManagementSystem.git
 - Open the project in any IDE of your choice preferably STS and run.

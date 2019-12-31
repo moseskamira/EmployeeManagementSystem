@@ -34,7 +34,7 @@
      <table class="addEmpTable">
           <tr><td><label>Department Name:</label></td><td><form:input path="deptName" placeholder="Enter Department Name"/></td></tr>
           <tr><td><label>Department Head:</label></td><td><form:input path="deptHead" placeholder="Enter Department Head"/></td></tr>
-          <tr><td><label>Floor Number:</label></td><td><form:input path="deptLocation" placeholder="Enter Department Floor Number"/></td></tr>
+          <tr><td><label>Floor Level:</label></td><td><form:input path="deptLocation" placeholder="Enter Department Floor Level"/></td></tr>
           <tr><td> </td><td align="left"> <input type="submit" value="Save Department"></td></tr>
      </table>
     </form:form>

@@ -21,7 +21,10 @@
 }
 #indexTopTable tr:nth-child(even){
 	background-color: #ffffff;
-	}
+}
+#indexTopTable tr:hover {
+	background-color: #ffffff;
+}
 </style>
 
 </head>
@@ -57,7 +60,6 @@
                </c:forEach>
      </table>
  </div>
-
 </body>
 <footer align="center">  
      <p>Designed and Implemented By: Moses Kamira Talemwa</p>  
