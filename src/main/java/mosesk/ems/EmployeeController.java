@@ -1,6 +1,10 @@
 package mosesk.ems;
 
+import java.io.ByteArrayInputStream;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -39,34 +44,22 @@ public class EmployeeController {
 	
 	@RequestMapping(value="/addNewEmployee", method=RequestMethod.POST)
 	public String postEmployeeData(@ModelAttribute("employee") Employee employee, 
-			BindingResult result, SessionStatus status) {
+			BindingResult result, SessionStatus status, HttpServletRequest request) {
 		boolean error = false;
 		if(employee.getEmployeeFirstName().isEmpty()) {
-			result.rejectValue("employeeFirstName", "This Field Can Not Be Blank");
+			result.rejectValue("employeeFirstName", "error.employeeFirstName");
 			error = true;
 		}
 		if(employee.getEmployeeLastName().isEmpty()) {
-			result.rejectValue("employeeLastName", "This Field Can Not Be Blank");
+			result.rejectValue("employeeLastName", "error.employeeLastName");
 			error = true;
 		}
 		if(employee.getEmployeeGender().isEmpty()) {
-			result.rejectValue("employeeGender", "This Field Can Not Be Blank");
+			result.rejectValue("employeeGender", "error.employeeGender");
 			error = true;
 		}
 		if(employee.getEmployeeDOB().isEmpty()) {
-			result.rejectValue("employeeDOB", "This Field Can Not Be Blank");
-			error = true;
-		}
-		if(employee.getEmployeeDeptName().isEmpty()) {
-			result.rejectValue("employeeDeptName", "This Field Can Not Be Blank");
-			error = true;
-		}
-		if(employee.getEmployeeJobType().isEmpty()) {
-			result.rejectValue("employeeJobType", "This Field Can Not Be Blank");
-			error = true;
-		}
-		if(employee.getEmployeeContractDuration()<1) {
-			result.rejectValue("employeeContractDuration", "Duration Can Not Be Less Than 1");
+			result.rejectValue("employeeDOB", "error.employeeDOB");
 			error = true;
 		}
 		if(error) {
@@ -74,6 +67,13 @@ public class EmployeeController {
 		}
 		service.saveEmployee(employee);
 		status.setComplete();
+		
+		if(!employee.getEmployeePhoto().getOriginalFilename().equals("")) {
+			PhotoUploadUtility.uploadPhoto(request, employee.getEmployeePhoto());
+			
+		}
+		
+		
 		return "redirect:newEmployeeForm";
 	}
 	
@@ -90,8 +90,13 @@ public class EmployeeController {
 	
 	@RequestMapping("/employeeDetail")
 	public ModelAndView getEmployeeDetail(@RequestParam Long employeeId) {
+		Employee employeeDetail = service.getEmployeeDetail(employeeId);
 		ModelAndView mv = new ModelAndView("employeeDetailView");
-		mv.addObject("employee", service.getEmployeeDetail(employeeId));
+		MultipartFile empPhoto = employeeDetail.getEmployeePhoto();
+	
+
+		mv.addObject("employee", employeeDetail);
+		mv.addObject("empPhoto", empPhoto);
 		return mv;
 	}
 	

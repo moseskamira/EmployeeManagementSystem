@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -28,29 +29,36 @@
 .addEmpTable tr:nth-child(even){
 	background-color: #ffffff;
 	}
+.error 
+    {
+    color: #ff0000;
+    }
 </style>
 
 </head>
 <body background='imageFolder/emsb.jpeg'>
 <h1 align="center"> ENTER EMPLOYEE DATA</h1>
 <div align="center">
-<form:form action="addNewEmployee" method="post" modelAttribute="employee">
+<form:form action="addNewEmployee" method="post" modelAttribute="employee" enctype="multipart/form-data">
      <table class="addEmpTable">
-          <tr><td><label>First Name:</label></td><td><form:input path="employeeFirstName" placeholder="Enter First Name"/></td></tr>
-          <tr><td><label>Last Name:</label> </td><td><form:input path="employeeLastName" placeholder="Enter Last Name"/> </td></tr>
+          <tr><td><spring:message code="lbl.employeeFirstName"/></td><td><form:input path="employeeFirstName" placeholder="Enter First Name"/></td></tr>
+          <tr><td colspan="2" align="center"><form:errors path="employeeFirstName" cssClass="error" /></td></tr>
+          <tr><td><spring:message code="lbl.employeeLastName"/></td><td><form:input path="employeeLastName" placeholder="Enter Last Name"/></td></tr>
+          <tr><td colspan="2" align="center"><form:errors path="employeeLastName" cssClass="error" /></td></tr>
           <tr><td><label>Other Names:</label></td><td><form:input path="employeeOtherName" placeholder="Enter Other Name"/></td></tr>
-          <tr><td> <label>Date Of Birth:</label></td><td><form:input path="employeeDOB" placeholder="Select Date Of Birth" id="datepicker-1"/></td></tr>
-          <tr><td><label>Gender:</label></td>
+          <tr><td><spring:message code="lbl.employeeDOB"/><td><form:input path="employeeDOB" placeholder="Select Date Of Birth" id="datepicker-1"/></td></tr>
+          <tr><td colspan="2" align="center"><form:errors path="employeeDOB" cssClass="error" /></td></tr>
+          <tr><td><spring:message code="lbl.employeeGender"/>
               <td><form:radiobutton path="employeeGender" value="Male" checked="true"/>Male
                  <form:radiobutton path="employeeGender" value="Female"/>Female
               </td></tr>
-          <tr><td> <label>Department:</label></td>
+          <tr><td><spring:message code="lbl.employeeDOB" text="Department" />
               <td> <form:select path="employeeDeptName">
               <c:forEach items="${departments}" var="department">
               <option value="${department.deptName}">${department.deptName}</option>
               </c:forEach>
               </form:select></td></tr>
-          <tr><td> <label>Employment Type:</label></td>
+          <tr><td><spring:message code="lbl.employeeJobType"/>
           <td><form:select path="employeeJobType"> 
                     <form:option value="FullTime" label="Full Time"/>
                     <form:option value="PartTime" label="Part Time"/>
