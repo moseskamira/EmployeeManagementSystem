@@ -6,97 +6,119 @@
 <head>
 <meta charset="UTF-8">
 <title>EMS</title>
-<link href="css/custom.css" rel="stylesheet">
 
 <style type="text/css">
+#employees {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+background-color: #ddd;
+width: 80%;
+}
+#employees td, #employees th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+#employees tr:nth-child(even){
+background-color: #f2f2f2;
+}
+#employees tr:hover {
+background-color: #ffffff;
+}
+#employees th {
+padding-top: 8px;
+padding-bottom: 8px;
+text-align: center;
+background-color: #000000;
+text-transform: uppercase;
+color: white;
+}
+
 #indexTopTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  background-color: #ddd;
-  width: 80%;
-  border-radius: 2em;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+background-color: #ddd;
+width: 80%;
+border-radius: 2em;
 }
 #indexTopTable td, #indexTopTable th {
-  border-radius: 1em;
-  padding: 8px;
+border-radius: 1em;
+padding: 8px;
 }
 #indexTopTable tr:nth-child(even){
-	background-color: #ffffff;
+background-color: #ffffff;
 }
 #indexTopTable tr:hover {
 	background-color: #ffffff;
 }
-html {
-height:100%;
-
-}
-body {
-height:100%;
-
-}
 .wrapper {
-min-height:100%;
+height:100%;
 position:relative;
 text-align: center;
-margin: 15px;  
-
+margin: 20px;  
 }
 .content {
-padding-bottom:20%;
+padding-bottom:2%;
 float: right;
-width:70%;
-
-
-
+width:76%;
 }
 .sideMenu {
-padding-bottom:20%;
- float: left;
-  display: inline-block;
-  width: 20%;
-  text-align: left;
-  background-color: #ddd;
-  border-radius: 3px;
-
+height:80%;
+float: left;
+display: inline-block;
+width: 20%;
+text-align: left;
+background-color: #ddd;
+border-radius: 4px;
+margin-left: 2%;
+margin-right: 2%;
 }
+
 .footer {
-position:absolute;
-bottom:2%;
-height:18%;
-width:100%;
-
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  font-size:12px;
 }
+
+table.center {
+margin-left:auto; 
+margin-right:auto;
+}
+
 </style>
 
 </head>
 <body background='imageFolder/emsb.jpeg'>
-<div class="wrapper">
+
+<div class="wrapper" style="overflow-x:auto; background-color: lightblue;">
 <h1 align="center">EMPLOYEE MANAGEMENT SYSTEM </h1>
 <h3 align="center">E.M.S</h3>
-<div class="sideMenu">
+
+<div class="sideMenu" style="overflow-x:auto;">
 <h2 align="center">ADMIN MENU</h2>
-<table id="adminMenu" align="center">
-           <tr> <td align="left"><a href="newDepartmentForm"> <em><font color="blue">Create Department</font></em></a></td></tr>
-           <tr><td align="left"><a href="newEmployeeForm"> <em><font color="blue">New Employee !</font></em></a></td></tr>
+<table id="adminMenu" class="center">
+       <tr> <td align="left"><a href="newDepartmentForm"> <em><font color="blue">Create Department</font></em></a></td></tr>
+       <tr><td align="left"><a href="newEmployeeForm"> <em><font color="blue">New Employee !</font></em></a></td></tr>
      </table>
-
 </div>
+<div class="content" align="center" style="overflow-x:auto;">
 
-<div class="content">
 
-<div align="center"> 
-     <form action="search" method="get">
-     <table id="indexTopTable">
-           <tr><td align="center"><input type="text" name="myKeyword"/ placeholder="CASE SENSITIVE SEARCH"><input type="submit" value="Search"></td>
+     <form action="search" method="get" class="center">
+     <table id="indexTopTable" class="center">
+           <tr><td align="center"><input type="text" name="myKeyword"/ placeholder="CASE SENSITIVE SEARCH"><input type="submit" value="Search"></td></tr>
      </table>
      </form>
-     <table border="1" id="employees">
+     <table border="1" id="employees" class="center" >
            <tr>
-               <th>FIRST NAME </th>
-               <th>LAST NAME</th>
-               <th>GENDER</th>
-               <th>DEPARTMENT</th>
-               <th>SALARY </th>
-               <th colspan="3">ACTION </th>
+               <th>First Name </th>
+               <th>Last Name</th>
+               <th>Gender</th>
+               <th>Department</th>
+               <th>Salary </th>
+               <th colspan="3">Action </th>
                </tr>
                <c:forEach items="${employees}" var="employee">
                <tr>
@@ -111,13 +133,12 @@ width:100%;
      </table>
  </div>
  </div>
- <div class="footer"> 
-     <footer align="center">  
+  <div class="footer" align="center"> 
+     <footer class="center">  
      <p>Designed and Implemented By: Moses Kamira Talemwa</p>  
      <p>E-mail To: <a href="mailto:moses.african@gmail.com">moses.african@gmail.com</a>.</p>  
      <p>Repository Link: <a href="https://github.com/moseskamira/EmployeeManagementSystem">moseskamira</a></p> 
      </footer>
- </div>
  </div>
 </body>
  

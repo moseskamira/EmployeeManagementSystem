@@ -19,7 +19,7 @@
 .addEmpTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color: #ddd;
-  width: 30%;
+  width: 40%;
   border-radius: 2em;
 }
 .addEmpTable td, .addEmpTable th {
