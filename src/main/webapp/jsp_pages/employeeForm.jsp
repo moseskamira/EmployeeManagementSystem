@@ -52,7 +52,7 @@
               <td><form:radiobutton path="employeeGender" value="Male" checked="true"/>Male
                  <form:radiobutton path="employeeGender" value="Female"/>Female
               </td></tr>
-          <tr><td><spring:message code="lbl.employeeDOB" text="Department" />
+          <tr><td><spring:message code="lbl.employeeDOB"/>
               <td> <form:select path="employeeDeptName">
               <c:forEach items="${departments}" var="department">
               <option value="${department.deptName}">${department.deptName}</option>
