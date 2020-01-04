@@ -1,13 +1,14 @@
 package mosesk.ems;
 
-import java.io.File;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name="empTable")
@@ -43,7 +44,8 @@ public class Employee {
 	Double employeeSalary;
 	
 	@Column(name="empPhoto")
-	File employeePhoto;
+	@Transient
+	MultipartFile employeePhoto;
 	
 	public Employee() {
 		super();
@@ -52,7 +54,7 @@ public class Employee {
 	
 	public Employee(Long employeeId, String employeeFirstName, String employeeLastName, String employeeOtherName,
 			String employeeGender, String employeeDOB, String employeeDeptName, String employeeJobType,
-			int employeeContractDuration, Double employeeSalary, File employeePhoto) {
+			int employeeContractDuration, Double employeeSalary, MultipartFile employeePhoto) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeFirstName = employeeFirstName;
@@ -147,11 +149,11 @@ public class Employee {
 		this.employeeSalary = employeeSalary;
 	}
 	
-	public File getEmployeePhoto() {
+	public MultipartFile getEmployeePhoto() {
 		return employeePhoto;
 	}
 
-	public void setEmployeePhoto(File employeePhoto) {
+	public void setEmployeePhoto(MultipartFile employeePhoto) {
 		this.employeePhoto = employeePhoto;
 	}
 

@@ -25,10 +25,37 @@
 #indexTopTable tr:hover {
 	background-color: #ffffff;
 }
+html {
+height:100%;
+
+}
+body {
+height:100%;
+
+}
+.wrapper {
+min-height:100%;
+position:relative;
+
+}
+.content {
+padding-bottom:20%;
+
+}
+.footer {
+position:absolute;
+bottom:1%;
+height:18%;
+width:100%;
+
+}
 </style>
 
 </head>
 <body background='imageFolder/emsb.jpeg'>
+<div class="wrapper">
+
+<div class="content">
 <h1 align="center">EMPLOYEE MANAGEMENT SYSTEM </h1>
 <h3 align="center">E.M.S</h3>
 <div align="center"> 
@@ -60,10 +87,15 @@
                </c:forEach>
      </table>
  </div>
-</body>
-<footer align="center">  
+ </div>
+ <div class="footer"> 
+     <footer align="center">  
      <p>Designed and Implemented By: Moses Kamira Talemwa</p>  
      <p>E-mail To: <a href="mailto:moses.african@gmail.com">moses.african@gmail.com</a>.</p>  
      <p>Repository Link: <a href="https://github.com/moseskamira/EmployeeManagementSystem">moseskamira</a></p> 
-</footer> 
+     </footer>
+ </div>
+ </div>
+</body>
+ 
 </html>
