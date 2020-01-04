@@ -11,7 +11,7 @@
 #empEditForm {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color: #ddd;
-  width: 40%;
+  width: 30%;
   border-radius: 2em;
 }
 #empEditForm td, #empEditForm th {
@@ -27,7 +27,7 @@
 <body background='imageFolder/emsb.jpeg'>
 <div align="center">
 <h1>EDIT ${employee.employeeFirstName}'s DATA </h1>
-    <form:form action="addNewEmployee" method="post" modelAttribute="employee">
+    <form:form action="editEmployee" method="post" modelAttribute="employee">
         <table border="1" id="empEditForm">
            <tr><td><label>ID:</label></td><td> ${employee.employeeId} <form:hidden path="employeeId"/></td></tr>
            <tr><td><label>FirstName:</label></td><td><form:input path="employeeFirstName"/> </td></tr>

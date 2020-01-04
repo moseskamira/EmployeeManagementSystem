@@ -36,15 +36,31 @@ height:100%;
 .wrapper {
 min-height:100%;
 position:relative;
+text-align: center;
+margin: 15px;  
 
 }
 .content {
 padding-bottom:20%;
+float: right;
+width:70%;
+
+
+
+}
+.sideMenu {
+padding-bottom:20%;
+ float: left;
+  display: inline-block;
+  width: 20%;
+  text-align: left;
+  background-color: #ddd;
+  border-radius: 3px;
 
 }
 .footer {
 position:absolute;
-bottom:1%;
+bottom:2%;
 height:18%;
 width:100%;
 
@@ -54,16 +70,23 @@ width:100%;
 </head>
 <body background='imageFolder/emsb.jpeg'>
 <div class="wrapper">
-
-<div class="content">
 <h1 align="center">EMPLOYEE MANAGEMENT SYSTEM </h1>
 <h3 align="center">E.M.S</h3>
+<div class="sideMenu">
+<h2 align="center">ADMIN MENU</h2>
+<table id="adminMenu" align="center">
+           <tr> <td align="left"><a href="newDepartmentForm"> <em><font color="blue">Create Department</font></em></a></td></tr>
+           <tr><td align="left"><a href="newEmployeeForm"> <em><font color="blue">New Employee !</font></em></a></td></tr>
+     </table>
+
+</div>
+
+<div class="content">
+
 <div align="center"> 
      <form action="search" method="get">
      <table id="indexTopTable">
-           <tr> <td align="left"><a href="newDepartmentForm"> <em><font color="blue">Create Department</font></em></a></td>
-           <td align="center"><input type="text" name="myKeyword"/ placeholder="CASE SENSITIVE SEARCH"><input type="submit" value="Search"></td>
-           <td align="right"><a href="newEmployeeForm"> <em><font color="blue">New Employee !</font></em></a></td></tr>
+           <tr><td align="center"><input type="text" name="myKeyword"/ placeholder="CASE SENSITIVE SEARCH"><input type="submit" value="Search"></td>
      </table>
      </form>
      <table border="1" id="employees">

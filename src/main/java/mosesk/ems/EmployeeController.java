@@ -1,6 +1,5 @@
 package mosesk.ems;
 
-import java.io.ByteArrayInputStream;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -65,6 +64,7 @@ public class EmployeeController {
 		if(error) {
 			return "employeeForm";
 		}
+		
 		service.saveEmployee(employee);
 		status.setComplete();
 		
@@ -76,6 +76,14 @@ public class EmployeeController {
 		
 		return "redirect:newEmployeeForm";
 	}
+	
+	@RequestMapping(value="/editEmployee", method=RequestMethod.POST)
+	public String editEmployeeData(@ModelAttribute("employee") Employee employee, SessionStatus status) {
+		service.saveEmployee(employee);
+		status.setComplete();
+		return "redirect:";
+	}
+	
 	
 	@RequestMapping(value = "/success", method = RequestMethod.GET)
 	    public String success(Model model) {
