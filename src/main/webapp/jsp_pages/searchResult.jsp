@@ -7,21 +7,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<style type="text/css">
-#searchedemployees {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  background-color: #ddd;
-  width: 40%;
-  border-radius: 2em;
-}
-#searchedemployees td, #searchedemployees th {
-  border: 0px;
-  padding: 8px;
-}
-#searchedemployees tr:nth-child(even){
-	background-color: #ffffff;
-	}
-</style>
+<c:url value="/css/custom.css" var="myCss" />
+<link href="${myCss}" rel="stylesheet" >
 
 </head>
 <body background='imageFolder/emsb.jpeg'>

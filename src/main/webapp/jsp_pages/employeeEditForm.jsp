@@ -1,27 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+ <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>EMS</title>
 
-<style type="text/css">
-#empEditForm {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  background-color: #ddd;
-  width: 30%;
-  border-radius: 2em;
-}
-#empEditForm td, #empEditForm th {
-  border: 0px;
-  padding: 8px;
-}
-#empEditForm tr:nth-child(even){
-	background-color: #ffffff;
-	}
-</style>
+<c:url value="/css/custom.css" var="myCss" />
+<link href="${myCss}" rel="stylesheet" >
 
 </head>
 <body background='imageFolder/emsb.jpeg'>

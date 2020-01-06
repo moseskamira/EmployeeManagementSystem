@@ -15,26 +15,8 @@
             $( "#datepicker-1" ).datepicker();  
          });  
  </script>  
-<style type="text/css">
-.addEmpTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  background-color: #ddd;
-  width: 40%;
-  border-radius: 2em;
-}
-.addEmpTable td, .addEmpTable th {
-  border-radius: 1em;
-  padding: 8px;
-}
-.addEmpTable tr:nth-child(even){
-	background-color: #ffffff;
-	}
-.error 
-    {
-    color: #ff0000;
-    font-size: 12px;
-    }
-</style>
+<c:url value="/css/custom.css" var="myCss" />
+<link href="${myCss}" rel="stylesheet" >
 
 </head>
 <body background='imageFolder/emsb.jpeg'>

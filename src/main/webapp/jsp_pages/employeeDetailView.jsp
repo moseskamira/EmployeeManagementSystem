@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
    
 <!DOCTYPE html>
 <html>
@@ -7,21 +7,8 @@
 <meta charset="UTF-8">
 <title>Employee Detail</title>
 
-<style type="text/css">
-#empDetail {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  background-color: #ddd;
-  width: 40%;
-  border-radius: 2em;
-}
-#empDetail td, #empDetail th {
-  border: 0px;
-  padding: 8px;
-}
-#empDetail tr:nth-child(even){
-	background-color: #ffffff;
-	}
-</style>
+<c:url value="/css/custom.css" var="myCss" />
+<link href="${myCss}" rel="stylesheet" >
 
 </head>
 <body background='imageFolder/emsb.jpeg'>
