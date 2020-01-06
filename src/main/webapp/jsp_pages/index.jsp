@@ -7,87 +7,8 @@
 <meta charset="UTF-8">
 <title>EMS</title>
 
-<style type="text/css">
-#employees {
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-background-color: #ddd;
-width: 80%;
-}
-#employees td, #employees th {
-border: 1px solid #ddd;
-padding: 8px;
-}
-#employees tr:nth-child(even){
-background-color: #f2f2f2;
-}
-#employees tr:hover {
-background-color: #ffffff;
-}
-#employees th {
-padding-top: 8px;
-padding-bottom: 8px;
-text-align: center;
-background-color: #000000;
-text-transform: uppercase;
-color: white;
-}
-
-#indexTopTable {
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-background-color: #ddd;
-width: 80%;
-border-radius: 2em;
-}
-#indexTopTable td, #indexTopTable th {
-border-radius: 1em;
-padding: 8px;
-}
-#indexTopTable tr:nth-child(even){
-background-color: #ffffff;
-}
-#indexTopTable tr:hover {
-	background-color: #ffffff;
-}
-.wrapper {
-height:100%;
-position:relative;
-text-align: center;
-margin: 20px;  
-}
-.content {
-padding-bottom:2%;
-float: right;
-width:76%;
-}
-.sideMenu {
-height:80%;
-float: left;
-display: inline-block;
-width: 20%;
-text-align: left;
-background-color: #ddd;
-border-radius: 4px;
-margin-left: 2%;
-margin-right: 2%;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  font-size:12px;
-}
-
-table.center {
-margin-left:auto; 
-margin-right:auto;
-}
-
-</style>
+<c:url value="/css/custom.css" var="myCss" />
+<link href="${myCss}" rel="stylesheet" >
 
 </head>
 <body background='imageFolder/emsb.jpeg'>

@@ -1,5 +1,157 @@
 @charset "UTF-8";
 
+#employees {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	width: 80%;
+	}
+#employees td, #employees th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	}
+#employees tr:nth-child(even){
+	background-color: #f2f2f2;
+	}
+#employees tr:hover {
+	background-color: #ffffff;
+	}
+#employees th {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: center;
+	background-color: #000000;
+	text-transform: uppercase;
+	color: white;
+	}
+
+#indexTopTable {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	width: 80%;
+	border-radius: 2em;
+	}
+#indexTopTable td, #indexTopTable th {
+	border-radius: 1em;
+	padding: 8px;
+	}
+#indexTopTable tr:nth-child(even){
+	background-color: #ffffff;
+	}
+#indexTopTable tr:hover {
+	background-color: #ffffff;
+	}
+.wrapper {
+	height:100%;
+	position:relative;
+	text-align: center;
+	margin: 20px;  
+	}
+.content {
+	padding-bottom:2%;
+	float: right;
+	width:76%;
+	}
+.sideMenu {
+	height:80%;
+	float: left;
+	display: inline-block;
+	width: 20%;
+	text-align: left;
+	background-color: #ddd;
+	border-radius: 4px;
+	margin-left: 2%;
+	margin-right: 2%;
+	}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #000000;
+	color: white;
+	text-align: center;
+	font-size:12px;
+	}
+
+table.center {
+	margin-left:auto; 
+	margin-right:auto;
+	}
+
+.addEmpTable {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	width: 60%;
+	border-radius: 2em;
+	}
+.addEmpTable td, .addEmpTable th {
+	border-radius: 1em;
+	padding: 8px;
+	}
+.addEmpTable tr:nth-child(even){
+	background-color: #ffffff;
+	}
+.error {
+	color: #ff0000;
+	font-size: 12px;
+	}
+	
+.addDeptTable {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	width: 40%;
+	border-radius: 2em;
+	}
+.addDeptTable td, .addDeptTable th {
+	border-radius: 1em;
+	padding: 8px;
+	}
+.addDeptTable tr:nth-child(even){
+	background-color: #ffffff;
+	}
+	
+#empDetail {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	width: 40%;
+	border-radius: 2em;
+	}
+#empDetail td, #empDetail th {
+	border: 0px;
+	padding: 8px;
+	}
+#empDetail tr:nth-child(even){
+	background-color: #ffffff;
+	}
+
+#empEditForm {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	width: 30%;
+	border-radius: 2em;
+	}
+#empEditForm td, #empEditForm th {
+	border: 0px;
+	padding: 8px;
+	}
+#empEditForm tr:nth-child(even){
+	background-color: #ffffff;
+	}
+	
+#searchedemployees {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	width: 40%;
+	border-radius: 2em;
+	}
+#searchedemployees td, #searchedemployees th {
+	border: 0px;
+	padding: 8px;
+	}
+#searchedemployees tr:nth-child(even){
+	background-color: #ffffff;
+	}
 
 
 
