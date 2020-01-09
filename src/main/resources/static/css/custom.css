@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+html {
+	height: 100%;
+}
+
+body {
+	height: 90%;
+	
+}
+
 #employees {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	background-color: #ddd;
@@ -28,7 +37,6 @@
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	background-color: #ddd;
 	width: 80%;
-	border-radius: 2em;
 	}
 #indexTopTable td, #indexTopTable th {
 	border-radius: 1em;
@@ -41,10 +49,10 @@
 	background-color: #ffffff;
 	}
 .wrapper {
-	height:100%;
+	min-height:100%;
 	position:relative;
 	text-align: center;
-	margin: 20px;  
+	margin: 2px;  
 	}
 .content {
 	padding-bottom:2%;
@@ -64,7 +72,7 @@
 	}
 
 .footer {
-	position: fixed;
+	position: relative;
 	left: 0;
 	bottom: 0;
 	width: 100%;
@@ -82,7 +90,6 @@ table.center {
 .addEmpTable {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	background-color: #ddd;
-	width: 60%;
 	border-radius: 2em;
 	}
 .addEmpTable td, .addEmpTable th {
@@ -100,7 +107,6 @@ table.center {
 .addDeptTable {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	background-color: #ddd;
-	width: 40%;
 	border-radius: 2em;
 	}
 .addDeptTable td, .addDeptTable th {
@@ -114,7 +120,6 @@ table.center {
 #empDetail {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	background-color: #ddd;
-	width: 40%;
 	border-radius: 2em;
 	}
 #empDetail td, #empDetail th {
@@ -128,7 +133,6 @@ table.center {
 #empEditForm {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	background-color: #ddd;
-	width: 30%;
 	border-radius: 2em;
 	}
 #empEditForm td, #empEditForm th {
@@ -142,7 +146,7 @@ table.center {
 #searchedemployees {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	background-color: #ddd;
-	width: 40%;
+	width: 80%;
 	border-radius: 2em;
 	}
 #searchedemployees td, #searchedemployees th {

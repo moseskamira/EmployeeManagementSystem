@@ -9,6 +9,7 @@ Using the E.M.S, a company administrator can create new departments in the compa
 - Hibernate
 - Postgres Database
 - CSS (Cascading Style Sheet)
+- Bootstrap
 - HTML5
 - MVC (Model View Controller)
 

@@ -10,13 +10,19 @@
 
 <c:url value="/css/custom.css" var="myCss" />
 <link href="${myCss}" rel="stylesheet" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
 
 </head>
 <body background='imageFolder/emsb.jpeg'>
-<div align="center">
-<h1>EDIT ${employee.employeeFirstName}'s DATA </h1>
+<div class="wrapper" style="overflow-x:auto; background-color: lightblue;">
+    <%@include file="./shared/headerInfo.jsp" %>
+<div class="sideMenu" style="overflow-x:auto;">
+    <%@include file="./shared/sideBar.jsp" %>
+</div>
+<div class="content" align="center" style="overflow-x:auto;">
+<h3>EDIT ${employee.employeeFirstName}'s DATA </h3>
     <form:form action="editEmployee" method="post" modelAttribute="employee">
-        <table border="1" id="empEditForm">
+        <table id="empEditForm" style="width:80%">
            <tr><td><label>ID:</label></td><td> ${employee.employeeId} <form:hidden path="employeeId"/></td></tr>
            <tr><td><label>FirstName:</label></td><td><form:input path="employeeFirstName"/> </td></tr>
            <tr><td><label>LastName:</label></td><td><form:input path="employeeLastName"/> </td></tr>
@@ -27,9 +33,11 @@
            <tr><td> <label>Job Type:</label></td><td><form:input path="employeeJobType"/></td></tr>
            <tr><td> <label>Contract Duration:</label></td><td><form:input path="employeeContractDuration"/></td></tr>
            <tr><td> <label>Salary:</label></td><td><form:input path="employeeSalary"/></td></tr><tr>
-           </td><td><td>  <input type="submit" value="Save"></td></tr>        
+           <tr><td></td><td>  <input type="submit" value="Save"></td></tr>        
         </table>
      </form:form>
  </div>
+ </div>
 </body>
+<%@include file="./shared/footer.jsp" %>
 </html>
