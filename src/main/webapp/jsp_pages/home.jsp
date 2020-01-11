@@ -9,7 +9,7 @@
                <th>First Name </th>
                <th>Last Name</th>
                <th>Gender</th>
-               <th>Department</th>
+              
                <th>Salary </th>
                <th colspan="3">Action </th>
                </tr>
@@ -18,7 +18,7 @@
                    <td>${employee.employeeFirstName}</td>
                    <td>${employee.employeeLastName}</td>
                    <td>${employee.employeeGender}</td>
-                   <td>${employee.employeeDeptName}</td>
+               
                    <td>${employee.employeeSalary}</td>
                    <td align="center"><a href="employeeDetail?employeeId=${employee.employeeId}">Detail</a></td><td align="center"><a href="editEmployeeForm?employeeId=${employee.employeeId}">Edit</a></td><td align="center"><a href="deleteEmployee?employeeId=${employee.employeeId}">Delete</a></td>
                </tr>

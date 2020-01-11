@@ -6,6 +6,7 @@ html {
 
 body {
 	height: 90%;
+	background-color: lightblue;
 	
 }
 
@@ -49,15 +50,35 @@ body {
 	background-color: #ffffff;
 	}
 .wrapper {
+	width:98%;
 	min-height:100%;
+	border-radius: 2em;
 	position:relative;
-	text-align: center;
-	margin: 2px;  
+	text-align: center; 
+	background-color: #1ABC9C;
+	margin-left:auto; 
+	margin-right:auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
 	}
+	
+	
 .content {
 	padding-bottom:2%;
 	float: right;
-	width:76%;
+	width:72%;
+	border-radius:2em;
+	background-color: #fff;
+	margin-left:2%;
+	margin-right:2%;
+	}
+	
+.loginContent {
+	padding-bottom:2%;
+	margin:10%;
+	border-radius:4em;
+	width:80%;
+	background-color: #fff;
 	}
 .sideMenu {
 	height:80%;
@@ -65,8 +86,8 @@ body {
 	display: inline-block;
 	width: 20%;
 	text-align: left;
-	background-color: #ddd;
-	border-radius: 4px;
+	background-color: #fff;
+	border-radius:2em;
 	margin-left: 2%;
 	margin-right: 2%;
 	}
@@ -159,7 +180,19 @@ table.center {
 
 
 
-
+#loginTable {
+	align:center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #ddd;
+	border-radius: 2em;
+	}
+#loginTable td, .loginTable th {
+	border-radius: 1em;
+	padding: 8px;
+	}
+#loginTable tr:nth-child(even){
+	background-color: #ffffff;
+	}
 
 
 

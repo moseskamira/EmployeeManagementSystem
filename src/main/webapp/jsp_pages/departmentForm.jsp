@@ -5,29 +5,39 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Add New Employee</title>
+<title>${title}</title>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
- 
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
 <c:url value="/css/custom.css" var="myCss" />
 <link href="${myCss}" rel="stylesheet" >
-
 </head>
-<body background='imageFolder/emsb.jpeg'>
-
-<div class="wrapper" style="overflow-x:auto; background-color: lightblue;">
+<body style="background-color: lightblue;">
+<div class="wrapper" style="overflow-x:auto;">
     <%@include file="./shared/headerInfo.jsp" %>
 <div class="sideMenu" style="overflow-x:auto;">
     <%@include file="./shared/sideBar.jsp" %>
 </div>
 <div class="content" align="center" style="overflow-x:auto;">
+<h5>ADD DEPARTMENT </h5>
 <form:form action="addDepartment" method="post" modelAttribute="department">
      <table class="addDeptTable" style="width:80%">
           <tr><td><label>Department Name:</label></td><td><form:input path="deptName" placeholder="Enter Department Name"/></td></tr>
-          <tr><td><label>Department Head:</label></td><td><form:input path="deptHead" placeholder="Enter Department Head"/></td></tr>
-          <tr><td><label>Floor Level:</label></td><td><form:input path="deptLocation" placeholder="Enter Department Floor Level"/></td></tr>
+          <tr><td><label>Department Head:</label></td><td><form:select path="deptHead">
+              <c:forEach items="${employees}" var="employee">
+              <option value="${employee.employeeFirstName} ${employee.employeeLastName}">${employee.employeeFirstName} ${employee.employeeLastName}</option>
+              </c:forEach>
+              </form:select></td></tr>
+          <tr><td><label>Department Floor:</label></td>
+               <td> <form:select path="deptLocation"> 
+                          <form:option value="First Floor" label="First Floor"/>
+                          <form:option value="Second Floor" label="Second Floor"/>
+                           <form:option value="Third Floor" label="Third Floor"/>
+                          <form:option value="Fourth Floor" label="Fourth Floor"/>
+                   </form:select>
+                </td></tr>
+                <tr><td colspan="2"><form:errors path="deptName" cssClass="error" /></td></tr>
           <tr><td> </td><td align="left"> <input type="submit" value="Save Department"></td></tr>
      </table>
     </form:form>

@@ -6,22 +6,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
 <c:url value="/css/custom.css" var="myCss" />
 <link href="${myCss}" rel="stylesheet" >
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
-
 </head>
-<body background='imageFolder/emsb.jpeg'>
-
-<div class="wrapper" style="overflow-x:auto; background-color: lightblue;">
+<body style="background-color: lightblue;">
+<div class="wrapper" style="overflow-x:">
     <%@include file="./shared/headerInfo.jsp" %>
 <div class="sideMenu" style="overflow-x:auto;">
     <%@include file="./shared/sideBar.jsp" %>
 </div>
-
 <div class="content" align="center" style="overflow-x:auto;">
-
 <table id="searchedemployees" style="width:80%">
                <c:forEach items="${searchResult}" var="employee">
                <tr><td colspan="3" align="center">BIO DATA </td></tr>
@@ -31,7 +26,7 @@
                <tr><td>Date Of Birth:</td><td>${employee.employeeDOB}</td></tr>
                <tr><td>Gender:</td><td>${employee.employeeGender}</td></tr>
                <tr><td colspan="3" align="center">OTHER INFORMATION </td></tr>
-               <tr><td> </td><td>Department:</td> <td>${employee.employeeDeptName} </td></tr>
+               
                <tr><td> </td><td>Job Type:</td> <td>${employee.employeeJobType} </td></tr>
                <tr><td> </td><td>Contract Duration:</td> <td>${employee.employeeContractDuration} </td></tr>
                <tr><td> </td><td>Salary:</td> <td>${employee.employeeSalary}</td><tr>
@@ -40,7 +35,6 @@
      </table>
  </div>
  </div>
-
 </body>
 <%@include file="./shared/footer.jsp" %>
 </html>
