@@ -19,6 +19,7 @@
 <div class="sideMenu" style="overflow-x:auto;">
     <%@include file="./shared/sideBar.jsp" %>
 </div>
+
 <div class="content" align="center" style="overflow-x:auto;">
 
 <table id="searchedemployees" style="width:80%">
