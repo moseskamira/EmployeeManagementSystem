@@ -19,9 +19,10 @@
 <div class="sideMenu" style="overflow-x:auto;">
     <%@include file="./shared/sideBar.jsp" %>
 </div>
+
 <div class="content" align="center" style="overflow-x:auto;">
 
-<table border="1" id="searchedemployees">
+<table id="searchedemployees" style="width:80%">
                <c:forEach items="${searchResult}" var="employee">
                <tr><td colspan="3" align="center">BIO DATA </td></tr>
                <tr><td rowspan="5">PROFILE PHOTO </td> <td>First Name:</td><td>${employee.employeeFirstName}</td></tr>

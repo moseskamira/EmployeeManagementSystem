@@ -24,7 +24,7 @@
 </div>
 <div class="content" align="center" style="overflow-x:auto;">
 <form:form action="addDepartment" method="post" modelAttribute="department">
-     <table class="addDeptTable">
+     <table class="addDeptTable" style="width:80%">
           <tr><td><label>Department Name:</label></td><td><form:input path="deptName" placeholder="Enter Department Name"/></td></tr>
           <tr><td><label>Department Head:</label></td><td><form:input path="deptHead" placeholder="Enter Department Head"/></td></tr>
           <tr><td><label>Floor Level:</label></td><td><form:input path="deptLocation" placeholder="Enter Department Floor Level"/></td></tr>

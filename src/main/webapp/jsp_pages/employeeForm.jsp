@@ -30,7 +30,7 @@
 
 <div class="content" align="center" style="overflow-x:auto;">
 <form:form action="addNewEmployee" method="post" modelAttribute="employee" enctype="multipart/form-data">
-     <table class="addEmpTable">
+     <table class="addEmpTable" style="width:80%">
           <tr><td><spring:message code="lbl.empFirstName"/></td><td><form:input path="employeeFirstName" placeholder="Enter First Name"/></td></tr>
           <tr><td colspan="2" align="center"><form:errors path="employeeFirstName" cssClass="error" /></td></tr>
           <tr><td><spring:message code="lbl.empLastName"/></td><td><form:input path="employeeLastName" placeholder="Enter Last Name"/></td></tr>

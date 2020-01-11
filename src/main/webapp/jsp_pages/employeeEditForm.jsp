@@ -22,7 +22,7 @@
 <div class="content" align="center" style="overflow-x:auto;">
 <h3>EDIT ${employee.employeeFirstName}'s DATA </h3>
     <form:form action="editEmployee" method="post" modelAttribute="employee">
-        <table border="1" id="empEditForm">
+        <table id="empEditForm" style="width:80%">
            <tr><td><label>ID:</label></td><td> ${employee.employeeId} <form:hidden path="employeeId"/></td></tr>
            <tr><td><label>FirstName:</label></td><td><form:input path="employeeFirstName"/> </td></tr>
            <tr><td><label>LastName:</label></td><td><form:input path="employeeLastName"/> </td></tr>

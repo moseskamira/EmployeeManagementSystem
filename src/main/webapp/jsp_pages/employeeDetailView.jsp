@@ -22,7 +22,7 @@
 <div class="content" align="center" style="overflow-x:auto;">
 <h3> DETAILS FOR ${employee.employeeFirstName} </h3>
 
-<table border="1" id="empDetail">
+<table id="empDetail" style="width:80%">
                <tr><td colspan="3" align="center">BIO DATA </td></tr>
                <tr><td rowspan="5">${employee.employeePhoto} </td> <td>First Name:</td><td>${employee.employeeFirstName}</td></tr>
                <tr><td>Last Name:</td><td>${employee.employeeLastName}</td></tr>
