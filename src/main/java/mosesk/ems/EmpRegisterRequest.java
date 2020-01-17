@@ -1,85 +1,43 @@
 package mosesk.ems;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 import org.springframework.web.multipart.MultipartFile;
 
-@Entity
-@Table(name="empTable")
-public class Employee {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="empID", unique=true)
+public class EmpRegisterRequest {
 	Long employeeId;
 	
-	@Column(name="empFirstName", nullable=false)
+	@NotBlank
 	String employeeFirstName;
 	
-	@Column(name="empLastName", nullable=false)
+	@NotBlank
 	String employeeLastName;
 	
-	@Column(name="empOtherName")
 	String employeeOtherName;
 	
-	@Column(name="empGender", nullable=false)
 	String employeeGender;
 	
-	@Column(name="empDOB", nullable=false)
+	@NotBlank
 	String employeeDOB;
 	
-	@Column(name="empJobType", nullable=false)
 	String employeeJobType;
-	@Column(name="empContDur", nullable=false)
+	
 	int employeeContractDuration;
 	
-	@Column(name="empSalary", nullable=false)
 	Double employeeSalary;
-	
-	@Column(name="empPhoto")
+
 	@Transient
 	MultipartFile employeePhoto;
 	
 	@Email
-    @Column(nullable = false)
+	@NotBlank
     private String employeeEmail;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="dept_id")
 	DepartmentDropDown employeeDeptName;
+
 	
-	public Employee() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Employee(Long employeeId, String employeeFirstName, String employeeLastName, String employeeOtherName,
-			String employeeGender, String employeeDOB, String employeeJobType,
-			int employeeContractDuration, Double employeeSalary, MultipartFile employeePhoto, String email, DepartmentDropDown employeeDeptName) {
-		super();
-		this.employeeId = employeeId;
-		this.employeeFirstName = employeeFirstName;
-		this.employeeLastName = employeeLastName;
-		this.employeeOtherName = employeeOtherName;
-		this.employeeGender = employeeGender;
-		this.employeeDOB = employeeDOB;
-		this.employeeDeptName = employeeDeptName;
-		this.employeeJobType = employeeJobType;
-		this.employeeContractDuration = employeeContractDuration;
-		this.employeeSalary = employeeSalary;
-		this.employeePhoto = employeePhoto;
-		this.employeeEmail = email;
-	}
 	
 	public Long getEmployeeId() {
 		return employeeId;
@@ -188,8 +146,4 @@ public class Employee {
 				+ ", employeePhoto=" + employeePhoto + ", employeeEmail=" + employeeEmail + ", employeeDeptName="
 				+ employeeDeptName + "]";
 	}
-	
-	
-
-
 }

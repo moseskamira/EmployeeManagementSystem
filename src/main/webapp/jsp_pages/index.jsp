@@ -11,10 +11,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
 </head>
 
-<body background='imageFolder/emsb.jpeg'>
-
-<div class="wrapper" style="overflow-x:auto; background-color: lightblue;">
+<body style="background-color: lightblue;">
+<div class="wrapper" style="overflow-x:auto;">
     <%@include file="./shared/headerInfo.jsp" %>
+    
 <div class="sideMenu" style="overflow-x:auto;">
     <%@include file="./shared/sideBar.jsp" %>
 </div>

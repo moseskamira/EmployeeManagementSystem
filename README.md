@@ -32,7 +32,7 @@ Using the E.M.S, a company administrator can create new departments in the compa
 
 ## How To Test EMS
 ### Online
-- Access the app via the link:https://ems-uganda.herokuapp.com/
+- Access the app via the link:https://ems-uganda.herokuapp.com/home
 - Perform the necessary tests as appropriate.
 
 ### Locally

@@ -15,6 +15,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 	public List<Employee> performSearch(@Param("keyword") String keyword);
 	
 	public List<Employee> findAllByOrderByEmployeeIdDesc();
+
+	public boolean existsByEmployeeEmail(String employeeEmail);
 	
 //	List<Employee> findALLByEmployeeGender(String employeeGender);
 	
