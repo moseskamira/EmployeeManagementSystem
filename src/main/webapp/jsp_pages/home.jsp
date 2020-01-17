@@ -1,8 +1,10 @@
  
 
+<h4><strong>AVAILABLE EMPLOYEE LIST</strong></h4>
+<hr/>
     <form class="form-inline my-2 my-lg-0" action="search" method="get">
       <input class="form-control mr-sm-2" type="search" name="myKeyword"/ placeholder="CASE SENSITIVE SEARCH">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search"><strong>Search</strong></button>
     </form><br/>
      <table border="1" id="employees" class="center" >
            <tr>

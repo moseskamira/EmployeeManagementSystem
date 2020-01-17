@@ -66,11 +66,11 @@ body {
 .content {
 	padding-bottom:2%;
 	float: right;
-	width:72%;
-	border-radius:2em;
+	width:80%;
+	border-radius:1em;
 	background-color: #fff;
-	margin-left:2%;
-	margin-right:2%;
+	margin-left:auto;
+	margin-right:auto;
 	}
 	
 .loginContent {
@@ -85,11 +85,11 @@ body {
 	float: left;
 	display: inline-block;
 	width: 20%;
-	text-align: left;
+	text-align: center;
 	background-color: #fff;
-	border-radius:2em;
-	margin-left: 2%;
-	margin-right: 2%;
+	border-radius:1em;
+	margin-left: auto;
+	margin-right: auto;
 	}
 
 .footer {
