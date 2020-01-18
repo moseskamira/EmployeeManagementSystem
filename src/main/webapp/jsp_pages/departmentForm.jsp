@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,14 +23,14 @@
 <div class="content" align="center" style="overflow-x:auto;">
 <h5>ADD DEPARTMENT </h5>
 <form:form action="addDepartment" method="post" modelAttribute="department">
-     <table class="addDeptTable" style="width:80%">
-          <tr><td><label>Department Name:</label></td><td><form:input path="deptName" placeholder="Enter Department Name"/></td></tr>
-          <tr><td><label>Department Head:</label></td><td><form:select path="deptHead">
+     <table class="addDeptTable" style="width:60%">
+          <tr><td><spring:message code="lbl.deptName"/></td><td><form:input path="deptName" placeholder="Enter Department Name"/></td></tr>
+          <tr><td><spring:message code="lbl.deptHead"/></td><td><form:select path="deptHead">
               <c:forEach items="${employees}" var="employee">
               <option value="${employee.employeeFirstName} ${employee.employeeLastName}">${employee.employeeFirstName} ${employee.employeeLastName}</option>
               </c:forEach>
               </form:select></td></tr>
-          <tr><td><label>Department Floor:</label></td>
+          <tr><td><spring:message code="lbl.deptFloor"/></td>
                <td> <form:select path="deptLocation"> 
                           <form:option value="First Floor" label="First Floor"/>
                           <form:option value="Second Floor" label="Second Floor"/>

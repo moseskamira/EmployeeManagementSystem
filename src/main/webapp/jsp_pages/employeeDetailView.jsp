@@ -19,18 +19,16 @@
 </div>
 <div class="content" align="center" style="overflow-x:auto;">
 <h5> DETAILS FOR ${employee.employeeFirstName} </h5>
-<table id="empDetail" style="width:80%">
-               <tr><td colspan="3" align="center">BIO DATA </td></tr>
-               <tr><td rowspan="5">${employee.employeePhoto} </td> <td>First Name:</td><td>${employee.employeeFirstName}</td></tr>
+<table id="empDetail" style="width:60%">
+               <tr><td colspan="2" align="center">BIO DATA </td></tr>
                <tr><td>Last Name:</td><td>${employee.employeeLastName}</td></tr>
                <tr><td>Other Names:</td><td>${employee.employeeOtherName}</td></tr>
                <tr><td>Date Of Birth:</td><td>${employee.employeeDOB}</td></tr>
                <tr><td>Gender:</td><td>${employee.employeeGender}</td></tr>
-               <tr><td colspan="3" align="center">OTHER INFORMATION </td></tr>
-              
-               <tr><td> </td><td>Job Type:</td> <td>${employee.employeeJobType} </td></tr>
-               <tr><td> </td><td>Contract Duration:</td> <td>${employee.employeeContractDuration} </td></tr>
-               <tr><td> </td><td>Salary:</td> <td>${employee.employeeSalary}</td><tr>
+               <tr><td colspan="2" align="center">OTHER INFORMATION </td></tr>
+               <tr><td>Job Type:</td> <td>${employee.employeeJobType} </td></tr>
+               <tr><td>Contract Duration:</td> <td>${employee.employeeContractDuration} </td></tr>
+               <tr><td>Salary:</td> <td>${employee.employeeSalary}</td><tr>
                </tr>
      </table>
  </div>

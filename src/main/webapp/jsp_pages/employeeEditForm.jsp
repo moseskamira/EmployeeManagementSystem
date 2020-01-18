@@ -20,18 +20,18 @@
 <div class="content" align="center" style="overflow-x:auto;">
 <h5>EDIT ${employee.employeeFirstName}'s DATA </h5>
     <form:form action="editEmployee" method="post" modelAttribute="employee">
-        <table id="empEditForm" style="width:80%">
-           <tr><td><label>ID:</label></td><td> ${employee.employeeId} <form:hidden path="employeeId"/></td></tr>
-           <tr><td><label>FirstName:</label></td><td><form:input path="employeeFirstName"/> </td></tr>
-           <tr><td><label>LastName:</label></td><td><form:input path="employeeLastName"/> </td></tr>
-           <tr><td> <label>Other Names:</label></td><td><form:input path="employeeOtherName"/></td></tr>
-           <tr><td> <label>Gender:</label></td><td><form:input path="employeeGender"/></td></tr>
-           <tr><td> <label>Date Of Birth:</label></td><td><form:input path="employeeDOB"/></td></tr>
-           <tr><td> <label>Employee Email:</label></td><td><form:input path="employeeEmail"/></td></tr>
+        <table id="empEditForm" style="width:60%">
+           <tr><td>ID:</td><td> ${employee.employeeId} <form:hidden path="employeeId"/></td></tr>
+           <tr><td>FirstName:</td><td><form:input path="employeeFirstName"/> </td></tr>
+           <tr><td>LastName:</td><td><form:input path="employeeLastName"/> </td></tr>
+           <tr><td>Other Names:</td><td><form:input path="employeeOtherName"/></td></tr>
+           <tr><td>Gender:</td><td><form:input path="employeeGender"/></td></tr>
+           <tr><td>Date Of Birth:</td><td><form:input path="employeeDOB"/></td></tr>
+           <tr><td>Employee Email:</td><td><form:input path="employeeEmail"/></td></tr>
           
-           <tr><td> <label>Job Type:</label></td><td><form:input path="employeeJobType"/></td></tr>
-           <tr><td> <label>Contract Duration:</label></td><td><form:input path="employeeContractDuration"/></td></tr>
-           <tr><td> <label>Salary:</label></td><td><form:input path="employeeSalary"/></td></tr><tr>
+           <tr><td>Job Type:</td><td><form:input path="employeeJobType"/></td></tr>
+           <tr><td>Contract Duration:</td><td><form:input path="employeeContractDuration"/></td></tr>
+           <tr><td>Salary:</td><td><form:input path="employeeSalary"/></td></tr><tr>
            <tr><td></td><td>  <input type="submit" value="Save"></td></tr>        
         </table>
      </form:form>
